@@ -1,0 +1,85 @@
+'use strict';
+
+/**
+ * @module DevicesMgr
+ */
+
+/**
+ * @description Defines if current device view is mobile
+ *
+ * @public
+ * @return {Boolean} true if current device view is mobile
+ */
+function isMobileView(refinementValue) {
+	var refinementValue = refinementValue;
+	var userAgent = !empty(request.httpUserAgent) ? request.httpUserAgent.toLowerCase() : '';
+
+	return !isDesktop(userAgent);
+}
+
+/**
+ * @description Defines if current devise is mobile
+ *
+ * @public
+ * @param {String} userAgent
+ * @return {Boolean} true if current device is mobile
+ */
+function isMobile(userAgent) {
+	var isMobile = false;
+
+	if (!empty(userAgent)) {
+		userAgent = userAgent.toLowerCase();
+		isMobile = !!userAgent.match(new RegExp('(mobile|phone|ipod|android|blackberry|windows ce|opera mini|palm)'));
+	}
+
+	return isMobile;
+}
+
+/**
+ * @description Defines if current devise is tablet
+ *
+ * @public
+ * @param {String} userAgent
+ * @return {Boolean} true if current device is tablet
+ */
+function isTablet(userAgent) {
+	var isTablet = false;
+
+	if (!empty(userAgent)) {
+		userAgent = userAgent.toLowerCase();
+
+		if (userAgent.indexOf('ipad') > -1) {
+			isTablet = true;
+		} else if (userAgent.indexOf('mobile') === -1) {
+			if (userAgent.indexOf('android') > -1) {
+				isTablet = true;
+			} else if (userAgent.indexOf('bb') > -1 && userAgent.indexOf('touch') > -1) {
+				isTablet = true;
+			} else if (userAgent.indexOf('blackberry') > -1) {
+				isTablet = true;
+			}
+		}
+	}
+
+	return isTablet;
+}
+
+/**
+ * @description Defines if current devise is desktop
+ *
+ * @public
+ * @param {String} userAgent
+ * @return {Boolean} true if current device is tablet
+ */
+function isDesktop(userAgent) {
+	userAgent = (userAgent || request.httpUserAgent || '').toLowerCase();
+
+	return !isMobile(userAgent) && !isTablet(userAgent);
+}
+
+module.exports = {
+	isMobileView: isMobileView,
+	isMobile: isMobile,
+	isTablet: isTablet,
+	isDesktop: isDesktop,
+};

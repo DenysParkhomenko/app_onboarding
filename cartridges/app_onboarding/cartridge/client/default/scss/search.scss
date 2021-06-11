@@ -1,0 +1,9 @@
+@import "~base/search";
+
+.refinements {
+    li {
+        &.color-attribute.desktop {
+            display: block;
+        }
+    }
+}

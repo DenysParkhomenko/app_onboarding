@@ -1,0 +1,10 @@
+<li class="color-attribute desktop ${!refinementValue.selectable ? 'disabled' : ''}">
+    <button data-href="${refinementValue.url}">
+        <span class="
+              <isif condition="${refinementValue.selected && refinementValue.selectable}">selected</isif>
+              <isif condition="${!refinementValue.selectable}">disabled</isif>"
+        >
+            ${refinementValue.displayValue} (${refinementValue.hitCount})
+        </span>
+    </button>
+</li>

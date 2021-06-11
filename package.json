@@ -28,8 +28,14 @@
     "postcss-loader": "^2.1.5",
     "sass-loader": "^7.0.3"
   },
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  },
   "browserslist": [
     "last 2 versions",
     "ie >= 10"
-  ]
+  ],
+  "paths": {
+    "base": "../storefront-reference-architecture/cartridges/app_storefront_base/"
+  }
 }
