@@ -1,0 +1,1 @@
+<isprint value="${item.expirationDays}" style="INTEGER"/> days left

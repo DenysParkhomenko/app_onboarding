@@ -31,5 +31,10 @@
   "browserslist": [
     "last 2 versions",
     "ie >= 10"
-  ]
+  ],
+  "paths": {
+    "base": "../storefront-reference-architecture/cartridges/app_storefront_base/",
+    "lib_productlist": "../lib_productlist/cartridges/lib_productlist/",
+    "plugin_wishlists": "../plugin_wishlists/cartridges/plugin_wishlists/"
+  }
 }
