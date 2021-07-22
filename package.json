@@ -31,5 +31,10 @@
   "browserslist": [
     "last 2 versions",
     "ie >= 10"
-  ]
+  ],
+  "paths": {
+    "base": "../storefront-reference-architecture/cartridges/app_storefront_base/",
+    "plugin_giftregistry": "../plugin_giftregistry/cartridges/plugin_giftregistry/",
+    "plugin_wishlists": "../plugin_wishlists/cartridges/plugin_wishlists/"
+  }
 }
