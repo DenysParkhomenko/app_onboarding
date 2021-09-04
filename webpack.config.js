@@ -7,15 +7,18 @@ var path = require('path');
         name: 'js',
         entry: sgmfScripts.createJsPath(),
         output: {
-            path: path.resolve('./cartridges/app_onboarding/cartridge/static'),
+            path: path.resolve('./cartridges/plugin_notifyme/cartridge/static'),
             filename: '[name].js'
+        },
+        externals: {
+            'jquery': 'jQuery'
         }
     }, {
         mode: 'none',
         name: 'scss',
         entry: sgmfScripts.createScssPath(),
         output: {
-            path: path.resolve('./cartridges/app_onboarding/cartridge/static'),
+            path: path.resolve('./cartridges/plugin_notifyme/cartridge/static'),
             filename: '[name].css'
         },
         module: {
@@ -35,7 +38,13 @@ var path = require('path');
                             ]
                         }
                     }, {
-                        loader: 'sass-loader'
+                        loader: 'sass-loader',
+                        options: {
+                            includePaths: [
+                                path.resolve(process.cwd(), '../storefront-reference-architecture/node_modules/'),
+                                path.resolve(process.cwd(), '../storefront-reference-architecture/node_modules/flag-icon-css/sass')
+                            ]
+                        }
                     }]
                 })
             }]

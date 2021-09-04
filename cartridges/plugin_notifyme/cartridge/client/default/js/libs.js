@@ -1,0 +1,1 @@
+require('./libs/select2.min.js');

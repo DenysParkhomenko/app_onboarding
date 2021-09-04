@@ -1,0 +1,65 @@
+<div class="modal modal-center" id="notifyMeModal" role="dialog" aria-modal="true">
+    <div class="modal-content">
+        <div class="modal-header">
+            ${Resource.msg('notifyme.text', 'notifyme', null)}
+        </div>
+        <form
+            id="notifyMe-form"
+            name="${pdict.notifyMeForm.htmlName}"
+            autocomplete="on"
+            method="POST"
+            action="${URLUtils.url('NotifyMe-Subscribe')}"
+        >
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group required">
+                            <label class="form-control-label" for="notifyme-form-email">
+                                ${Resource.msg('label.input.login.email', 'login', null)}
+                            </label>
+                            <input
+                                type="email"
+                                id="notifyme-form-email"
+                                class="form-control required"
+                                name="${pdict.notifyMeForm.email.htmlName}"
+                                data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+                                data-pattern-mismatch="${Resource.msg('error.message.parse.email.profile.form', 'forms', null)}"
+                                data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
+                                aria-required="true"
+                                required
+                            >
+                            <div class="invalid-feedback" id="form-email-error"></div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="form-control-label" for="notifyme-form-name">
+                                ${Resource.msg('label.input.name', 'notifyme', null)}
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="notifyme-form-name"
+                                name="${pdict.notifyMeForm.name.htmlName}"
+                                data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+                                data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
+                                aria-describedby="form-name-error"
+                                aria-required="true"
+                                required
+                            >
+                            <div class="invalid-feedback" id="form-name-error"></div>
+                        </div>
+                        <input type="hidden" name="${pdict.notifyMeForm.product.htmlName}">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-block btn-primary">
+                            ${Resource.msg('lable.button.submit', 'notifyme', null)}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

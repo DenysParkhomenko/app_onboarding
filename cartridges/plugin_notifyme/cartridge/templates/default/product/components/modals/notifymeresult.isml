@@ -1,0 +1,19 @@
+<div class="modal modal-center" id="notifyMeModalResult" role="dialog" aria-modal="true">
+    <div class="modal-content">
+        <div class="modal-header">
+            ${Resource.msg('notifyme', 'notifyme', null)}
+        </div>
+        <div class="modal-body">
+            <isprint value="${Resource.msgf('notifyme.result.text', 'notifyme', null, '<span></span>')}" encoding="off" />
+        </div>
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-sm-12">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-block btn-primary">
+                        ${Resource.msg('button.close', 'search', null)}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
