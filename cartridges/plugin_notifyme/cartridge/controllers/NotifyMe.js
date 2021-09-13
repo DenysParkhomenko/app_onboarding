@@ -1,20 +1,25 @@
 'use strict';
 
 var server = require('server');
-var Transaction = require('dw/system/Transaction');
-var CustomObjectMgr = require('dw/object/CustomObjectMgr');
 
 server.post('Subscribe', server.middleware.https, function(req, res, next) {
-    if (!validateForm(req.form)) {
+    var notifymeFrom = server.forms.getForm('notifyme');
+
+    if (!notifymeFrom.valid) {
         res.json({
             'result': 'ERROR'
         });
         next();
+
+        return;
     }
 
-    var email = req.form.dwfrm_notifyme_email;
-    var name = req.form.dwfrm_notifyme_name;
-    var product = req.form.dwfrm_notifyme_product;
+    var CustomObjectMgr = require('dw/object/CustomObjectMgr');
+    var Transaction = require('dw/system/Transaction');
+
+    var email = notifymeFrom.email.value;
+    var name = notifymeFrom.name.value;
+    var product = notifymeFrom.product.value;
 
     var customer = JSON.stringify({name: name, email: email});
     var newCustomers = [customer];
@@ -46,14 +51,5 @@ server.post('Subscribe', server.middleware.https, function(req, res, next) {
     });
     next();
 });
-
-function validateForm(form) {
-    return validateEmail(form.dwfrm_notifyme_email) && form.dwfrm_notifyme_name && form.dwfrm_notifyme_product;
-}
-
-function validateEmail(email) {    
-    var regex = /^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$/;
-    return regex.test(email);
-}
 
 module.exports = server.exports();

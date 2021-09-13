@@ -12,7 +12,7 @@ function initSizeSelect($selectSize, selectSizeClasses, isRenderNotifyMe, notify
                             </div>`);
             }
 
-            return $(`<div><span="b-size">${state.text}</size></div>`);
+            return $(`<div><span class="b-size">${state.text}</span></div>`);
         }
     });
     $selectSize.on('select2:open', () => {
