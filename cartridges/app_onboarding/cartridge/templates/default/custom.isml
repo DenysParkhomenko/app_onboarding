@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Custom</title>
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/custom.css');
+        assets.addJS('/js/custom.js');
+    </isscript>
+    <isinclude sf-toolkit="off" template="/common/scripts" />
+</head>
+<body>
+
+    <div>
+        <div>
+            <input type="text" name="">
+            <button type="button">Category</button>
+        </div>
+        <div>
+            <input type="text" name="">
+            <button type="button">Product</button>
+        </div>
+    </div>
+
+
+    <pre id="content">
+
+    </pre>
+</body>
