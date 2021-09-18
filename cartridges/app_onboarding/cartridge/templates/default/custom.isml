@@ -1,29 +1,101 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Custom</title>
-    <isscript>
-        var assets = require('*/cartridge/scripts/assets.js');
-        assets.addCss('/css/custom.css');
-        assets.addJS('/js/custom.js');
-    </isscript>
-    <isinclude sf-toolkit="off" template="/common/scripts" />
-</head>
+    <head>
+        <isscript>
+            var assets = require('*/cartridge/scripts/assets.js');
+            assets.addCss('/css/custom.css');
+            assets.addJs('/js/custom.js');
+        </isscript>
+        <isinclude template="/common/scripts" />
+        <isinclude template="common/htmlHead" />
+    </head>
 <body>
+    <div>
+        <a
+            href="https://aaga-010.sandbox.us01.dx.commercecloud.salesforce.com/on/demandware.store/Sites-RefArch-Site/en_US/"
+            target="_blank">
+                GO HOME
+        </a>
+    </div>
 
     <div>
+        <div class="flex">
+            <div class="flex">
+                <div class="border">
+                    <div class="flex">
+                        <div class="box">
+                            <div>
+                                <input type="text" value="my_test_email@test.com">
+                                <input type="text" value="${'thgkdqQ112!!##@@sdfd'}">
+                            </div>
+                            <div>
+                                <button type="button" id="customerAuthCredentials">customer auth with credentials</button>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" id="customerAuthGuest">customer auth as guest</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <button type="button" id="session">set session</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <button type="button" id="customerAuthCookie">customer auth from with cookie</button><br>
+                        <small>by default performs session init</small>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div>
+                    <div>
+                        <button type="button" id="refreshToken">refresh token</button><br>
+                        <small>requires a valid token, updates expiration date</small>
+                    </div>
+                    <div>
+                        <button type="button" id="invalidateToken">invalidate token</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
         <div>
-            <input type="text" name="">
-            <button type="button">Category</button>
+            <button type="button" id="getCustomer">get cutomer info</button>
         </div>
         <div>
-            <input type="text" name="">
-            <button type="button">Product</button>
+            <button type="button" id="getCustomerBasket">get customer basket</button>
+        </div>
+        <div>
+            <button type="button" id="createBasket">create basket</button>
+        </div>
+        <div>
+            <input type="text" value="root">
+            <button type="button" id="getCategoriesBtn">get categories by category</button>
+        </div>
+        <div>
+            <input type="text" value="newarrivals-mens">
+            <button type="button" id="getCategoryProductsBtn">get category products</button>
+        </div>
+        <div>
+            <input type="text" value="34736758M">
+            <button type="button" id="getProduct">get product</button>
+        </div>
+        <div>
+            <input type="text" value="34736758M">
+            <button type="button" id="getProductVariations">get product variations</button>
+        </div>
+        <div>
+            <input type="text" value="883360541501M">
+            <button type="button" id="addProductToBasket">add product to basket</button>
         </div>
     </div>
 
-
-    <pre id="content">
-
-    </pre>
+    <pre id="content"></pre>
 </body>

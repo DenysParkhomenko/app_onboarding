@@ -1,0 +1,306 @@
+{
+	"_v": "21.9",
+	"clients": [
+		{
+			"client_id": "ec54ec33-f3a0-4d99-aa94-f34ac3fba9f3",
+			"allowed_origins": [
+				"http://thelevelgroup.zendesk.com",
+				"https://thelevelgroup.zendesk.com",
+				"https://thelevelgroup1553763021.zendesk.com"
+			],
+			"resources": [
+				{
+					"resource_id": "/products/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/products/*/availability",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/products/*/recommendations",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/search_suggestion",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/products/*/images",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/products/*/links",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/products/*/variations",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/products/*/prices",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)",
+					"config": {
+						"product.prices.price_book_ids": "15IT,15DE,15CZ,15AU,15US,(**),**,*"
+					}
+				},
+				{
+					"resource_id": "/categories/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/product_search",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)",
+					"config": {
+						"product.prices.price_book_ids": "15DE,15US,(**),**,*"
+					}
+				},
+				{
+					"resource_id": "/product_search/availability",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/product_search/represented_products",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/product_search/images",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/product_search/prices",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)",
+					"config": {
+						"product.prices.price_book_ids": "15US,(**),**,*"
+					}
+				},
+				{
+					"resource_id": "/product_search/variations",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/order_search",
+					"methods": [
+						"post"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/orders/*",
+					"methods": [
+						"get",
+						"patch"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/customers/auth",
+					"methods": [
+						"post"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				},
+				{
+					"resource_id": "/orders/*/notes",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)",
+					"write_attributes": "(**)"
+				}
+			]
+		},
+		{
+			"client_id": "59fbc712-ba80-4b56-817f-368843719106",
+			"resources": [
+				{
+					"resource_id": "/products/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)"
+				}
+			]
+		},
+		{
+			"client_id": "66ebdc9a-475b-49be-beea-cbc446a202bb",
+			"resources": [
+				{
+					"resource_id": "/products/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)"
+				},
+				{
+					"resource_id": "/order_search",
+					"methods": [
+						"post"
+					],
+					"read_attributes": "(**)"
+				},
+				{
+					"resource_id": "/categories/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)"
+				},
+				{
+					"resource_id": "/content/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)"
+				},
+				{
+					"resource_id": "/custom_objects/*/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)"
+				}
+			]
+		},
+		{
+			"client_id": "b67ffb1f-5b5c-4ce0-8b1b-ee2c996b7b0d",
+			"allowed_origins": [
+				"http://jenkins.thelevelgroup.com",
+				"https://jenkins.thelevelgroup.com"
+			],
+			"resources": [
+				{
+					"resource_id": "/products/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)"
+				},
+				{
+					"resource_id": "/categories/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)"
+				},
+				{
+					"resource_id": "/content/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)"
+				},
+				{
+					"resource_id": "/custom_objects/*/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)"
+				}
+			]
+		},
+		{
+			"client_id": "66ebdc9a-475b-49be-beea-cbc446a202bb",
+			"resources": [
+				{
+					"resource_id": "/products/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)"
+				},
+				{
+					"resource_id": "/order_search",
+					"methods": [
+						"post"
+					],
+					"read_attributes": "(**)"
+				},
+				{
+					"resource_id": "/categories/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)"
+				},
+				{
+					"resource_id": "/content/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)"
+				},
+				{
+					"resource_id": "/custom_objects/*/*",
+					"methods": [
+						"get"
+					],
+					"read_attributes": "(**)"
+				}
+			]
+		}
+	]
+}
