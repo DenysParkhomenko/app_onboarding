@@ -9,7 +9,14 @@ var path = require('path');
         output: {
             path: path.resolve('./cartridges/app_onboarding/cartridge/static'),
             filename: '[name].js'
-        }
+        },
+        resolve: {
+            alias: {
+                jquery: path.resolve(__dirname, '../storefront-reference-architecture/node_modules/jquery'),
+                bootstrap: path.resolve(__dirname, '../storefront-reference-architecture/node_modules/bootstrap'),
+                lodash: path.resolve(__dirname, '../storefront-reference-architecture/node_modules/lodash')
+            }
+        },
     }, {
         mode: 'none',
         name: 'scss',
@@ -35,7 +42,13 @@ var path = require('path');
                             ]
                         }
                     }, {
-                        loader: 'sass-loader'
+                        loader: 'sass-loader',
+                        options: {
+                            includePaths: [
+                                path.resolve(process.cwd(), '../storefront-reference-architecture/node_modules/'),
+                                path.resolve(process.cwd(), '../storefront-reference-architecture/node_modules/flag-icon-css/sass')
+                            ]
+                        }
                     }]
                 })
             }]
